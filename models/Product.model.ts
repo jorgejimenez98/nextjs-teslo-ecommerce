@@ -32,10 +32,9 @@ const productSchema = new Schema({
         },
     },
 
-    // TODO createdAt
 }, { timestamps: true })
 
-// TODO Crear Indice de Mongo
+productSchema.index({ title: 'text', tags: 'text' });
 
 const ProductModel: Model<IProduct> = mongoose.models.Product || model('Product', productSchema)
 
