@@ -37,6 +37,6 @@ const productSchema = new Schema({
 
 // TODO Crear Indice de Mongo
 
-const ProductModel: Model<IProduct> = mongoose.models.EntProduct || model('Product', productSchema)
+const ProductModel: Model<IProduct> = mongoose.models.Product || model('Product', productSchema)
 
 export default ProductModel
